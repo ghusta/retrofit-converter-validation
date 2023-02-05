@@ -32,6 +32,12 @@ Retrofit retrofit = new Retrofit.Builder()
     .build();
 ----
 
+=== Use Annotations
+
+- DTO (`@NotNull`, `@Max`, etc.)
+- API method parameters (`@Valid`, before `@Body`)
+- Add `@ValidationGroups(groups = {...})` for specific validation
+
 == References
 
 - https://square.github.io/retrofit/
