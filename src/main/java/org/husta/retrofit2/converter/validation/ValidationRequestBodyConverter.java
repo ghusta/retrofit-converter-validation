@@ -13,15 +13,17 @@ final class ValidationRequestBodyConverter<T> implements Converter<T, RequestBod
 
     private final Converter<Object, RequestBody> delegate;
     private final Validator validator;
+    private final Class<?>[] validationGroups;
 
-    ValidationRequestBodyConverter(Converter<Object, RequestBody> delegate, Validator validator) {
+    ValidationRequestBodyConverter(Converter<Object, RequestBody> delegate, Validator validator, Class<?>... validationGroups) {
         this.delegate = delegate;
         this.validator = validator;
+        this.validationGroups = validationGroups;
     }
 
     @Override
     public RequestBody convert(T value) throws IOException {
-        Set<ConstraintViolation<T>> constraintViolations = validator.validate(value);
+        Set<ConstraintViolation<T>> constraintViolations = validator.validate(value, validationGroups);
         if (!constraintViolations.isEmpty()) {
             throw new ConstraintViolationException(constraintViolations);
         }

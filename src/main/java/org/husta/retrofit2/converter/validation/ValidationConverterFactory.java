@@ -49,9 +49,14 @@ public final class ValidationConverterFactory extends Converter.Factory {
         // See : retrofit2.OptionalConverterFactory
         Converter<Object, RequestBody> delegate = retrofit.nextRequestBodyConverter(this, type, parameterAnnotations, methodAnnotations);
         Objects.requireNonNull(delegate);
-        // methodAnnotations should contains @POST or @PUT ?
-        if ((hasBodyAnnotation(parameterAnnotations)) && hasValidAnnotation(parameterAnnotations)) {
-            return new ValidationRequestBodyConverter<>(delegate, validator);
+        // methodAnnotations should contain @POST or @PUT or something else
+        if ((hasAnnotation(parameterAnnotations, Body.class)) && hasAnnotation(parameterAnnotations, Valid.class)) {
+            ValidationGroups validationGroupsAnnotation = findFirstAnnotation(parameterAnnotations, ValidationGroups.class);
+            if (validationGroupsAnnotation == null) {
+                return new ValidationRequestBodyConverter<>(delegate, validator);
+            } else {
+                return new ValidationRequestBodyConverter<>(delegate, validator, validationGroupsAnnotation.groups());
+            }
         } else {
             return null;
         }
@@ -62,12 +67,18 @@ public final class ValidationConverterFactory extends Converter.Factory {
         return null;
     }
 
-    private boolean hasBodyAnnotation(Annotation[] parameterAnnotations) {
-        return Arrays.stream(parameterAnnotations).anyMatch(Body.class::isInstance);
+    private boolean hasAnnotation(Annotation[] parameterAnnotations, Class<? extends Annotation> annotationType) {
+        return Arrays.stream(parameterAnnotations).anyMatch(annotationType::isInstance);
     }
 
-    private boolean hasValidAnnotation(Annotation[] parameterAnnotations) {
-        return Arrays.stream(parameterAnnotations).anyMatch(Valid.class::isInstance);
+    @SuppressWarnings("unchecked")
+    private <A extends Annotation> A findFirstAnnotation(Annotation[] parameterAnnotations, Class<A> annotationClass) {
+        for (Annotation annotation : parameterAnnotations) {
+            if (annotation.annotationType().equals(annotationClass)) {
+                return (A) annotation;
+            }
+        }
+        return null;
     }
 
 }
