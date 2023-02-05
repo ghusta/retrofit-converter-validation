@@ -1,0 +1,29 @@
+package org.husta.retrofit2.api.github;
+
+import retrofit2.Call;
+import retrofit2.http.Body;
+import retrofit2.http.GET;
+import retrofit2.http.POST;
+import retrofit2.http.Path;
+
+import javax.validation.Valid;
+import java.util.List;
+
+/**
+ * From example : https://square.github.io/retrofit/
+ */
+public interface GitHubService {
+
+    /**
+     * Ref : https://docs.github.com/en/rest/repos/repos?#list-repositories-for-a-user
+     */
+    @GET("users/{user}/repos")
+    Call<List<Repository>> listRepos(@Path("user") String user);
+
+    /**
+     * Ref : https://docs.github.com/en/rest/repos/repos?#create-a-repository-for-the-authenticated-user
+     */
+    @POST("users/repos")
+    Call<Void> createRepo(@Valid @Body Repository repo);
+
+}
