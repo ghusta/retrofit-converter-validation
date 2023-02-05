@@ -34,5 +34,7 @@ Retrofit retrofit = new Retrofit.Builder()
 
 == References
 
+- https://square.github.io/retrofit/
 - https://futurestud.io/tutorials/retrofit-2-implementing-custom-converters
 - https://futurestud.io/tutorials/retrofit-2-introduction-to-multiple-converters
+- https://stackoverflow.com/questions/tagged/retrofit
