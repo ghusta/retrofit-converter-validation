@@ -11,7 +11,6 @@ import javax.validation.Validation;
 import javax.validation.Validator;
 import javax.validation.ValidatorFactory;
 import java.lang.annotation.Annotation;
-import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.Objects;
@@ -45,9 +44,8 @@ public final class ValidationConverterFactory extends Converter.Factory {
 
     @Override
     public Converter<?, RequestBody> requestBodyConverter(Type type, Annotation[] parameterAnnotations, Annotation[] methodAnnotations, Retrofit retrofit) {
-        hasBodyAnnotation(parameterAnnotations);
         Class<?> rawType = getRawType(type);
-        Type innerType = getParameterUpperBound(0, (ParameterizedType) type);
+        // Type innerType = getParameterUpperBound(0, (ParameterizedType) type);
         // See : retrofit2.OptionalConverterFactory
         Converter<Object, RequestBody> delegate = retrofit.nextRequestBodyConverter(this, type, parameterAnnotations, methodAnnotations);
         Objects.requireNonNull(delegate);
