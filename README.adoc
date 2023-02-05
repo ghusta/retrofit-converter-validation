@@ -34,8 +34,8 @@ Retrofit retrofit = new Retrofit.Builder()
 
 === Use Annotations
 
-- DTO (`@NotNull`, `@Max`, etc.)
-- API method parameters (`@Valid`, before `@Body`)
+- On DTO (`@NotNull`, `@Max`, etc.)
+- On API method parameters (`@Valid`, before `@Body`)
 - Add `@ValidationGroups(groups = {...})` for specific validation
 
 == References
