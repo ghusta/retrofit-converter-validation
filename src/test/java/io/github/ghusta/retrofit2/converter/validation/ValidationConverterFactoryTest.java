@@ -1,7 +1,7 @@
-package org.husta.retrofit2.converter.validation;
+package io.github.ghusta.retrofit2.converter.validation;
 
-import org.husta.retrofit2.api.github.GitHubService;
-import org.husta.retrofit2.api.github.Repository;
+import io.github.ghusta.retrofit2.api.github.GitHubService;
+import io.github.ghusta.retrofit2.api.github.Repository;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import retrofit2.Response;

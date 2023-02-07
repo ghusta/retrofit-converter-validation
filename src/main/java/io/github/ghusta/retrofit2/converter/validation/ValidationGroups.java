@@ -1,4 +1,4 @@
-package org.husta.retrofit2.converter.validation;
+package io.github.ghusta.retrofit2.converter.validation;
 
 import java.lang.annotation.Retention;
 import java.lang.annotation.Target;

@@ -1,4 +1,4 @@
-package org.husta.retrofit2.converter.validation;
+package io.github.ghusta.retrofit2.converter.validation;
 
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;

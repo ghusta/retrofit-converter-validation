@@ -1,4 +1,4 @@
-package org.husta.retrofit2.api.github;
+package io.github.ghusta.retrofit2.api.github;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
