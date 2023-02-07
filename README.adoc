@@ -2,6 +2,7 @@
 
 image:https://github.com/ghusta/retrofit-converter-validation/actions/workflows/maven.yml/badge.svg[Java CI with Maven,link=https://github.com/ghusta/retrofit-converter-validation/actions/workflows/maven.yml]
 image:https://img.shields.io/github/v/release/ghusta/retrofit-converter-validation?sort=semver&logo=GitHub[GitHub release,link=https://github.com/ghusta/retrofit-converter-validation/releases]
+image:https://img.shields.io/maven-central/v/io.github.ghusta.retrofit2/retrofit-converter-validation[Maven Central]
 
 == Overview
 
