@@ -6,7 +6,7 @@ image:https://img.shields.io/maven-central/v/io.github.ghusta.retrofit2/retrofit
 
 == Overview
 
-This library enables validating beans with https://beanvalidation.org/[Bean Validation] using Retrofit 2 and its converter feature.
+This library enables validating beans with https://beanvalidation.org/[Bean Validation] using https://square.github.io/retrofit/[Retrofit 2] thanks to its converter feature.
 
 == Getting started
 
@@ -35,6 +35,8 @@ Retrofit retrofit = new Retrofit.Builder()
     .addConverterFactory(GsonConverterFactory.create())
     .build();
 ----
+
+NOTE: The declaration order of converters is important. `ValidationConverterFactory` must be declared before JSON converters.
 
 === Use Annotations
 

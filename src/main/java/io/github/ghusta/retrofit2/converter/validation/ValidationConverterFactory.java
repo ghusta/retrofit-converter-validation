@@ -19,6 +19,15 @@ import java.util.Objects;
  * A {@linkplain Converter.Factory converter} which uses Bean Validation.
  * <p>
  * It should be declared first in the converter factory list.
+ * <p>
+ * Usage :
+ * <pre>
+ * Retrofit retrofit = new Retrofit.Builder()
+ *     .baseUrl("https://api.github.com/")
+ *     .addConverterFactory(ValidationConverterFactory.create())
+ *     ...
+ *     .build();
+ * </pre>
  *
  * @see Retrofit#converterFactories()
  */
