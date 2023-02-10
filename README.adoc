@@ -19,7 +19,7 @@ With Maven :
 <dependency>
     <groupId>org.husta.retrofit2</groupId>
     <artifactId>retrofit-converter-validation</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0</version>
 </dependency>
 ----
 
