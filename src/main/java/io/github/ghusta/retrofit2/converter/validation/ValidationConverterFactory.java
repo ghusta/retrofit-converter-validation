@@ -69,12 +69,12 @@ public final class ValidationConverterFactory extends Converter.Factory {
         return null;
     }
 
-    private boolean hasAnnotation(Annotation[] parameterAnnotations, Class<? extends Annotation> annotationType) {
+    private static boolean hasAnnotation(Annotation[] parameterAnnotations, Class<? extends Annotation> annotationType) {
         return Arrays.stream(parameterAnnotations).anyMatch(annotationType::isInstance);
     }
 
     @SuppressWarnings("unchecked")
-    private <A extends Annotation> A findFirstAnnotation(Annotation[] parameterAnnotations, Class<A> annotationClass) {
+    private static <A extends Annotation> A findFirstAnnotation(Annotation[] parameterAnnotations, Class<A> annotationClass) {
         for (Annotation annotation : parameterAnnotations) {
             if (annotation.annotationType().equals(annotationClass)) {
                 return (A) annotation;
