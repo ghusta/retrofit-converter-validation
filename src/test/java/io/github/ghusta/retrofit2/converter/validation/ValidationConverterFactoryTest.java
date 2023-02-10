@@ -2,13 +2,13 @@ package io.github.ghusta.retrofit2.converter.validation;
 
 import io.github.ghusta.retrofit2.api.github.GitHubService;
 import io.github.ghusta.retrofit2.api.github.Repository;
+import jakarta.validation.ConstraintViolationException;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import retrofit2.Response;
 import retrofit2.Retrofit;
 import retrofit2.converter.jackson.JacksonConverterFactory;
 
-import javax.validation.ConstraintViolationException;
 import java.io.IOException;
 import java.util.List;
 

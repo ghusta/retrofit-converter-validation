@@ -1,12 +1,12 @@
 package io.github.ghusta.retrofit2.api.github;
 
+import jakarta.validation.Valid;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
-import javax.validation.Valid;
 import java.util.List;
 
 /**

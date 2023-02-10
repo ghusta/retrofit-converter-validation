@@ -17,7 +17,7 @@ public @interface ValidationGroups {
 
     /**
      * The group or list of groups targeted for validation
-     * (defaults to {@link javax.validation.groups.Default Default})
+     * (defaults to {@link jakarta.validation.groups.Default Default})
      */
     Class<?>[] groups() default {};
 

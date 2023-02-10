@@ -1,11 +1,11 @@
 package io.github.ghusta.retrofit2.converter.validation;
 
+import jakarta.validation.ConstraintViolation;
+import jakarta.validation.ConstraintViolationException;
+import jakarta.validation.Validator;
 import okhttp3.RequestBody;
 import retrofit2.Converter;
 
-import javax.validation.ConstraintViolation;
-import javax.validation.ConstraintViolationException;
-import javax.validation.Validator;
 import java.io.IOException;
 import java.util.Set;
 

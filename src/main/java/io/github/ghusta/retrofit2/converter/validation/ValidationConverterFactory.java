@@ -1,15 +1,15 @@
 package io.github.ghusta.retrofit2.converter.validation;
 
+import jakarta.validation.Valid;
+import jakarta.validation.Validation;
+import jakarta.validation.Validator;
+import jakarta.validation.ValidatorFactory;
 import okhttp3.RequestBody;
 import okhttp3.ResponseBody;
 import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.http.Body;
 
-import javax.validation.Valid;
-import javax.validation.Validation;
-import javax.validation.Validator;
-import javax.validation.ValidatorFactory;
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Type;
 import java.util.Arrays;
