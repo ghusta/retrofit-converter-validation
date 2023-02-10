@@ -40,7 +40,7 @@ NOTE: The declaration order of converters is important. `ValidationConverterFact
 
 === Use Annotations
 
-- On DTO (`@NotNull`, `@Max`, etc.)
+- On DTO (`@NotNull`, `@Size`, `@Max`, etc.)
 - On API method parameters (`@Valid`, before `@Body`)
 - Add `@ValidationGroups(groups = {...})` for specific validation
 
