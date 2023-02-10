@@ -49,7 +49,9 @@ public final class ValidationConverterFactory extends Converter.Factory {
         // See : retrofit2.OptionalConverterFactory
         Converter<Object, RequestBody> delegate = retrofit.nextRequestBodyConverter(this, type, parameterAnnotations, methodAnnotations);
         Objects.requireNonNull(delegate);
-        // methodAnnotations should contain @POST or @PUT or something else
+        // methodAnnotations should for example contain @POST or @PUT or others
+        // could maybe manage validation groups with @ConvertGroup ?
+        // see also usage of Validation Groups in Quarkus doc : https://quarkus.io/guides/validation#validation-groups-for-rest-endpoint-or-service-method-validation
         if ((hasAnnotation(parameterAnnotations, Body.class)) && hasAnnotation(parameterAnnotations, Valid.class)) {
             ValidationGroups validationGroupsAnnotation = findFirstAnnotation(parameterAnnotations, ValidationGroups.class);
             if (validationGroupsAnnotation == null) {
