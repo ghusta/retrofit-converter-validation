@@ -61,6 +61,8 @@ class ValidationConverterFactoryTest {
 
         });
         assertThat(exception).isInstanceOf(ConstraintViolationException.class);
+        ConstraintViolationException constraintViolationException = (ConstraintViolationException) exception;
+        assertThat(constraintViolationException.getConstraintViolations()).hasSize(1);
     }
 
 }
