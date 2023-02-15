@@ -47,6 +47,7 @@ NOTE: The declaration order of converters is important. `ValidationConverterFact
 == References
 
 - https://square.github.io/retrofit/
+- https://beanvalidation.org/2.0/[Jakarta Bean Validation 2.0]
 - https://futurestud.io/tutorials/retrofit-2-implementing-custom-converters
 - https://futurestud.io/tutorials/retrofit-2-introduction-to-multiple-converters
 - https://stackoverflow.com/questions/tagged/retrofit
