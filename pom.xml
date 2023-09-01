@@ -29,7 +29,7 @@
     <scm>
         <connection>scm:git:git://github.com/ghusta/retrofit-converter-validation.git</connection>
         <developerConnection>scm:git:ssh://github.com:ghusta/retrofit-converter-validation.git</developerConnection>
-        <url>http://github.com/ghusta/retrofit-converter-validation/tree/main</url>
+        <url>https://github.com/ghusta/retrofit-converter-validation/tree/main</url>
     </scm>
     <distributionManagement>
         <snapshotRepository>
