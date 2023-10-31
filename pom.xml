@@ -4,7 +4,7 @@
 
     <groupId>io.github.ghusta.retrofit2</groupId>
     <artifactId>retrofit-converter-validation</artifactId>
-    <version>2.0.0</version>
+    <version>2.0.1-SNAPSHOT</version>
 
     <name>Retrofit 2 Converter for Jakarta Bean Validation</name>
     <description>Retrofit 2 Converter for Jakarta Bean Validation 3.0</description>
