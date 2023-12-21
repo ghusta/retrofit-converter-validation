@@ -47,7 +47,7 @@
         <retrofit.version>2.9.0</retrofit.version>
         <jakarta.validation-api.version>3.0.2</jakarta.validation-api.version>
         <hibernate-validator.version>7.0.5.Final</hibernate-validator.version>
-        <jakarta.el.version>4.0.1</jakarta.el.version>
+        <jakarta.el.version>4.0.2</jakarta.el.version>
     </properties>
 
     <dependencies>
