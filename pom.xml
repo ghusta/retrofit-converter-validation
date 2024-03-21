@@ -44,17 +44,27 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <module.name>io.github.ghusta.retrofit2.converter.validation</module.name>
 
-        <retrofit.version>2.9.0</retrofit.version>
+        <retrofit.version>2.10.0</retrofit.version>
         <jakarta.validation-api.version>2.0.2</jakarta.validation-api.version>
         <hibernate-validator.version>6.2.5.Final</hibernate-validator.version>
         <javax.el.version>3.0.1-b12</javax.el.version>
     </properties>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.squareup.retrofit2</groupId>
+                <artifactId>retrofit-bom</artifactId>
+                <version>${retrofit.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
     <dependencies>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>retrofit</artifactId>
-            <version>${retrofit.version}</version>
         </dependency>
 
         <!-- Jakarta Bean Validation -->
@@ -95,13 +105,11 @@
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-jackson</artifactId>
-            <version>${retrofit.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.squareup.retrofit2</groupId>
             <artifactId>converter-gson</artifactId>
-            <version>${retrofit.version}</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
