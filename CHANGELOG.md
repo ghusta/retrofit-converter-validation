@@ -1,3 +1,7 @@
+# 2.1.0 (????-??-??)
+
+- Update Retrofit 2.11
+
 # 2.0.0 (2023-02-14)
 
 - Supports Jakarta Bean Validation 3.0
